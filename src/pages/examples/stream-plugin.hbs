@@ -21,6 +21,7 @@ layout: example.hbs
   var buses = L.esri.streamFeatureLayer({
     url: 'https://geoeventsample3.esri.com:6443/arcgis/rest/services/SeattleBus/StreamServer',
     pointToLayer: function (geojson, latlng) {
+      console.log(geojson);
       return L.circleMarker(latlng, {
         fillColor: createRandomFill(),
         fillOpacity: 0.8,
